@@ -1,0 +1,22 @@
+[
+    {"model": "app.capital", "fields": {"pais": "Argentina", "capital": "Buenos Aires"}},
+    {"model": "app.capital", "fields": {"pais": "Brasil", "capital": "Brasilia"}},
+    {"model": "app.capital", "fields": {"pais": "Chile", "capital": "Santiago"}},
+    {"model": "app.capital", "fields": {"pais": "España", "capital": "Madrid"}},
+    {"model": "app.capital", "fields": {"pais": "Francia", "capital": "París"}},
+    {"model": "app.capital", "fields": {"pais": "Italia", "capital": "Roma"}},
+    {"model": "app.capital", "fields": {"pais": "México", "capital": "Ciudad de México"}},
+    {"model": "app.capital", "fields": {"pais": "Perú", "capital": "Lima"}},
+    {"model": "app.capital", "fields": {"pais": "Reino Unido", "capital": "Londres"}},
+    {"model": "app.capital", "fields": {"pais": "Estados Unidos", "capital": "Washington D.C."}},
+    {"model": "app.capital", "fields": {"pais": "Alemania", "capital": "Berlín"}},
+    {"model": "app.capital", "fields": {"pais": "Canadá", "capital": "Ottawa"}},
+    {"model": "app.capital", "fields": {"pais": "India", "capital": "Nueva Delhi"}},
+    {"model": "app.capital", "fields": {"pais": "Japón", "capital": "Tokio"}},
+    {"model": "app.capital", "fields": {"pais": "Rusia", "capital": "Moscú"}},
+    {"model": "app.capital", "fields": {"pais": "Sudáfrica", "capital": "Pretoria"}},
+    {"model": "app.capital", "fields": {"pais": "Australia", "capital": "Canberra"}},
+    {"model": "app.capital", "fields": {"pais": "Nueva Zelanda", "capital": "Wellington"}},
+    {"model": "app.capital", "fields": {"pais": "China", "capital": "Pekín"}},
+    {"model": "app.capital", "fields": {"pais": "Corea del Sur", "capital": "Seúl"}}
+]

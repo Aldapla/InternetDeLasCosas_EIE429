@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Zona de Entretenimiento</h1>
+  
+  <h2>Posts</h2>
+  <ul>
+    {% for post in posts %}
+      <li>{{ post.titulo }} - {{ post.contenido }}</li>
+    {% empty %}
+      <li>No hay posts de entretenimiento disponibles.</li>
+    {% endfor %}
+  </ul>
+
+  <h2>Juego de las Capitales</h2>
+  <div id="juego-capitales">
+    {% if capital_random %}
+      <form method="post" action="{% url 'verificar_respuesta' %}">
+        {% csrf_token %}
+        <input type="hidden" name="capital_id" value="{{ capital_random.id }}">
+        <p>¿Cuál es la capital de {{ capital_random.pais }}?</p>
+        <input type="text" name="respuesta" placeholder="Escribe tu respuesta aquí">
+        <button type="submit">Enviar</button>
+      </form>
+      <p>ID de la capital: {{ capital_random.id }}</p> <!-- Línea de depuración -->
+    {% else %}
+      <p>No hay datos de capitales disponibles.</p>
+    {% endif %}
+  </div>
+
+
+{% endblock %}

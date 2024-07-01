@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Lista de Tópicos</h1>
+  {% for topico in topicos %}
+    <div>
+      <h2>{{ topico.titulo }}</h2>
+      <p>{{ topico.contenido|truncatewords:50 }}</p>
+      <p>Fecha de creación: {{ topico.fecha_creacion }}</p>
+    </div>
+  {% endfor %}
+{% endblock %}

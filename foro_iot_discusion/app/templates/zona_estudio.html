@@ -1,0 +1,30 @@
+<!-- app/templates/zona_estudio.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Zona de Estudio</h1>
+  <ul>
+    {% for post in posts %}
+      <li>{{ post.titulo }} - {{ post.contenido }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>Repositorios de GitHub de {{ user }}</h2>
+  <ul>
+    {% for repo in repos %}
+      <li>
+        <a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a>
+        <p>{{ repo.description }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h2>Wikipedia Summary: {{ search_query }}</h2>
+  {% if wikipedia_summary %}
+    <h3>{{ wikipedia_summary.title }}</h3>
+    <p>{{ wikipedia_summary.extract }}</p>
+    <a href="{{ wikipedia_summary.content_urls.desktop.page }}" target="_blank">Leer más en Wikipedia</a>
+  {% else %}
+    <p>No se encontró información.</p>
+  {% endif %}
+{% endblock %}

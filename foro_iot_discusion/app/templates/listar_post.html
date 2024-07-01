@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Posts en {{ seccion }}{% endblock %}
+
+{% block content %}
+<h2>Posts en {{ seccion }}</h2>
+{% for post in posts %}
+    <h3><a href="{% url 'ver_post' post.id %}">{{ post.titulo }}</a></h3>
+    <p>{{ post.contenido|truncatewords:20 }}</p>
+    <p>Creado por {{ post.autor.username }} el {{ post.fecha_creacion }}</p>
+{% endfor %}
+<button onclick="location.href='{% url 'crear_post' %}'">Crear Nuevo Post</button>
+{% endblock %}

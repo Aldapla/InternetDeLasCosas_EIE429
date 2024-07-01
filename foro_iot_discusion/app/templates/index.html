@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - Foro EIE{% endblock %}
+
+{% block content %}
+<h1>Bienvenido al Foro EIE</h1>
+<button onclick="location.href='{% url 'zona_estudio' %}'">Zona de Estudio</button>
+<button onclick="location.href='{% url 'zona_entretencion' %}'">Zona de Entretención</button>
+<button onclick="location.href='{% url 'zona_debate' %}'">Zona de Debate</button>
+<button onclick="location.href='{% url 'login' %}'">Iniciar Sesión</button>
+<button onclick="location.href='{% url 'register' %}'">Registrarse</button>
+{% endblock %}

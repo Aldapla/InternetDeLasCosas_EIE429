@@ -1,0 +1,14 @@
+<!-- app/templates/github_repos.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Repositorios de GitHub de {{ user }}</h1>
+  <ul>
+    {% for repo in repos %}
+      <li>
+        <a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a>
+        <p>{{ repo.description }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

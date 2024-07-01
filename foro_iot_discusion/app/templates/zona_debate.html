@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Zona de Debate{% endblock %}
+
+{% block content %}
+<h1>Zona de Debate</h1>
+{% for post in posts %}
+    <h2><a href="{% url 'ver_post' post.id %}">{{ post.titulo }}</a></h2>
+    <p>{{ post.contenido|truncatewords:30 }}</p>
+    <p>Creado por {{ post.autor.username }} el {{ post.fecha_creacion }}</p>
+{% endfor %}
+<a href="{% url 'crear_post' %}">Crear nuevo post</a>
+{% endblock %}

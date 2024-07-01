@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Juego de Adivinar Capitales</h1>
+
+  {% if pais %}
+    <p>¿Cuál es la capital de {{ pais }}?</p>
+    <form method="post" action="{% url 'verificar_respuesta' %}">
+      {% csrf_token %}
+      <input type="hidden" name="capital_id" value="{{ capital_id }}">
+      <input type="text" name="respuesta" placeholder="Escribe tu respuesta aquí">
+      <button type="submit">Enviar</button>
+    </form>
+  {% else %}
+    <p>No hay datos de capitales disponibles.</p>
+  {% endif %}
+
+  <!-- Depuración -->
+  <h2>Datos de Depuración</h2>
+  <div>
+    <p>Capitales: {{ debug_capitales }}</p>
+  </div>
+{% endblock %}
+
